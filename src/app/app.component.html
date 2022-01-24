@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nav class="navbar navbar-expand-md">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">ShopBridge</a>
+  <!-- button on collapse -->
+  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button> -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav navStyle"><br>
+      <!-- Add Router links here -->   
+     <button class="btn btn-sucess"><a href [routerLink]="['/AddProduct']" routerLinkActive="active">New</a></button> &nbsp;&nbsp;&nbsp;&nbsp;
+     <button class="btn btn-sucess"><a href [routerLink]="['/view-item']" routerLinkActive="active">View</a></button> 
+    </ul>
+  </div>
+</nav>
+<h2 style="font-family: cursive;color: blue; align-content: center;">Welcome to ShopBridge!</h2>
+<router-outlet></router-outlet>
+<!--Add router outlet tag here -->

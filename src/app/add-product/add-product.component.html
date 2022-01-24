@@ -1,0 +1,51 @@
+<!-- <div class="mb-5">
+    <label for="Name" class="col-sm" >Name</label><br>
+    <input type="text" id="Name" placeholder="Name of the product"><br>
+  </div>
+  <div class="mb-5">
+    <label for="Description" class="form-label">Description</label>
+    <input type="text" class="form-control" id="Description" placeholder="Description">
+  </div> -->
+<div *ngIf="!sucessMessage" class="grid-container">
+    <div class="r1">
+        <div class="card" >
+            <h4 class="text-center">ADD NEW PRODUCT</h4>
+  <form [formGroup]="addProd">
+
+    <div class="row mb-3">
+        <br/>
+      <label for="Name" class="col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="Name" formControlName="Name">
+        <p *ngIf = "(addProd.controls.Name.dirty ||
+        addProd.controls.Name.touched) && addProd.controls.Name.errors" class="alert alert-danger">This field is required!</p>
+      </div>
+    </div>
+<br/>
+    <div class="row mb-3">
+      <label for="Description" class="col-sm-2 col-form-label">Description</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="Description" formControlName="Description">
+        <p *ngIf = "(addProd.controls.Description.dirty ||
+        addProd.controls.Description.touched ) && addProd.controls.Description.errors" class="alert alert-danger">This field is required!</p>
+      </div>
+    </div>
+    <br/>
+    <div class="row mb-3">
+      <label for="Price" class="col-sm-2 col-form-label">Price</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" id="Price" formControlName="Price" pattern="[0-9]*">
+        <p *ngIf = "(addProd.controls.Price.dirty ||
+        addProd.controls.Price.touched 
+        )  && addProd.controls.Price.errors" class="alert alert-danger">This field is required!</p>
+        
+      </div>
+    </div>
+    <br>
+<button [disabled]="addProd.invalid"  (click)="addProduct()"   class="btn btn-success"  >ADD</button>
+
+   </form>
+  
+</div>    
+</div>
+</div>

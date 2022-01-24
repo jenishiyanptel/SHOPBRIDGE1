@@ -1,0 +1,37 @@
+.card{
+    width: 800px;
+    margin-left:200px;
+    margin-top:80px;
+    background-color: teal;
+    padding-left: 50px;
+    height: 500px;
+}
+.card-header,.card-footer{
+    background-color: #66b2b2;
+}
+.card-body{
+    background-color: #b2d8d8;
+
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+}
+.r1{
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-gap:40px; */
+    padding-top: 100px;
+    padding-left: 350px;
+    padding-bottom: 10px;
+    
+}
+input{
+    width: 500px;
+}
+
+button{
+   width: 200px;
+    margin-left: 250px;
+}

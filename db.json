@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "Name": "Women Solid Cotton Jacket ",
+      "Description": "Women Solid Cotton Jacket Full Sleeve for Girls",
+      "Price": "370",
+      "id": 1
+    },
+    {
+      "Name": "Oddity printed",
+      "Description": "Oddity printed smart print reversible quilted women jacket",
+      "Price": "1447",
+      "id": 2
+    },
+    {
+      "Name": "Qube By Fort Collins",
+      "Description": "Women's Bomber Jacket",
+      "Price": "735",
+      "id": 3
+    },
+    {
+      "Name": "Women's Parka Jacket",
+      "Description": "Qube By Fort Collins Women's Parka Jacket",
+      "Price": "1039",
+      "id": 4
+    }
+  ]
+}
