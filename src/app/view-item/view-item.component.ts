@@ -15,10 +15,13 @@ export class ViewItemComponent implements OnInit {
   errorMessage!: string;
   sucessMessage!:string;
   save=false;
+  totallength:any;
+  page:number=1;
   constructor(private servc:ViewItemService,private router:Router) { }
 
   ngOnInit(): void {
-    this.servc.getAllProducts().subscribe(res=>{this.allProduct=res});
+    this.servc.getAllProducts().subscribe(res=>{this.allProduct=res;
+    this.totallength=res.length});
  
   
   

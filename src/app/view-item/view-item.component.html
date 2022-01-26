@@ -1,11 +1,13 @@
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
   integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-<div *ngIf="!updateflag && !save" class="grid-container" >
+
+  <div *ngIf="!updateflag && !save" class="grid-container" >
+  
     <div class="product">
         <div  class="subgrid">
                    <!-- code here to display the details of all the products as cards--> 
-                   <div *ngFor="let a of allProduct" class="card" >
+                   <div *ngFor="let a of allProduct| paginate: { itemsPerPage: 10, currentPage: page,totalItems:totallength }" class="card" >
                      
                       <img class="card-img-top" src="../../assets/images/image1.jpg" alt="..." />
                        <h5>{{a.Name}}</h5>
@@ -13,14 +15,17 @@
                         <li>Price:{{a.Price}}</li><br/>
                         <button (click)="Updatedata(a.id)" class="btn btn-primary">Update</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <button (click)="DeleteProduct(a.id)" class="btn btn-danger">Remove</button>
-                     
+                       
                     
                    </div>
-                   
+                     
       </div>
-        
+      <pagination-controls class="text-center" (pageChange)="page = $event"></pagination-controls>
       </div>
+      
         </div>
+
+        
         <div *ngIf="updateflag && !save" class="grid-container">
           <div class="product">
             <div  class="subgrid">
@@ -47,8 +52,11 @@
           </div>
             </div>
             
+                 
 <div *ngIf="sucessMessage && save">
  <i  class="fa-duotone fa-check"> {{sucessMessage}}</i>
-</div>         
+    
+
+  </div>    
         
                    

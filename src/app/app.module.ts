@@ -7,7 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ViewItemComponent } from './view-item/view-item.component';
 
-
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 @NgModule({
@@ -23,7 +23,7 @@ import { ViewItemComponent } from './view-item/view-item.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
